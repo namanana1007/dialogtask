@@ -1,0 +1,20 @@
+Turn 0 usr: Hi, what is the cost which pick you up at Mandalay Bay Resort/Casino
+Turn 1 sys: what is the pickup address
+Turn 2 usr: the pickup location is Mandalay Bay Resort/Casino
+Turn 3 sys: what is the drop off address
+Turn 4 usr: the dropoff location is Sam's Town
+Turn 5 sys: what is the date
+Turn 6 usr: today
+Turn 7 sys: how many people of you
+Turn 8 usr: 1 people
+Turn 9 sys: what is the pickup time
+Turn 10 usr: the pickup time is 5pm
+Turn 11 sys: what is the car type
+Turn 12 usr: uber
+Turn 13 sys: can I order a taxi
+Turn 14 usr: can I order a taxi, pickup city is Las Vegas
+Turn 15 sys: the cost is $16-21
+Turn 16 usr: can I order a taxi
+Turn 17 sys: Okay, I successfully booked a uber taxi which pick you up at Mandalay Bay Resort/Casino , pickup city is Las Vegas pickup at 5pm on today and drop you off at Sam's Town for 1 people , with $16-21
+Turn 18 usr: Thank you
+Turn 19 sys: Thank you

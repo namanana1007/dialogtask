@@ -52,7 +52,7 @@ class RealUser(UserSimulator):
         else:
             if sys_act == 'closing' or sys_act == "thanks":
                 self.episode_over = True
-            return self.episode_over, self.dialog_status
+        return self.episode_over, self.dialog_status
 
     def next(self, command, system_action):
         """ Generate next User Action based on last System Action """

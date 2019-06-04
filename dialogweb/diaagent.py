@@ -1,20 +1,21 @@
 import os,sys
 pathx = os.path.dirname(os.path.abspath(__file__))
-print "pathx:",pathx
+print(("pathx:",pathx))
 sys.path.append(pathx)
 
 import argparse, json, copy, os,sys
-import cPickle as pickle
+#import cPickle as pickle  /python2
+import pickle
 
-from deep_dialog.dialog_system import DialogManager, text_to_dict
-from deep_dialog.agents import AgentCmd, InformAgent, RequestAllAgent, RandomAgent, EchoAgent, RequestBasicsAgent, AgentDQN, RequestInformSlotAgent
-from deep_dialog.usersims import RealUser, RuleSimulator, RuleRestaurantSimulator, RuleTaxiSimulator
+from .deep_dialog.dialog_system import DialogManager, text_to_dict
+from .deep_dialog.agents import AgentCmd, InformAgent, RequestAllAgent, RandomAgent, EchoAgent, RequestBasicsAgent, AgentDQN, RequestInformSlotAgent
+from .deep_dialog.usersims import RealUser, RuleSimulator, RuleRestaurantSimulator, RuleTaxiSimulator
 
-from deep_dialog import dialog_config
-from deep_dialog.dialog_config import *
+from .deep_dialog import dialog_config
+from .deep_dialog.dialog_config import *
 
-from deep_dialog.nlu import nlu
-from deep_dialog.nlg import nlg
+from .deep_dialog.nlu import nlu
+from .deep_dialog.nlg import nlg
 
 global dialog_manager
 global first_time
@@ -49,7 +50,7 @@ def init_dialog_manager():
       "episodes": 500, 
       "predict_mode": False, 
       "cmd_input_mode": 0, 
-      "goal_file_path": "./dialogweb/deep_dialog/data_taxi/user_goals_first.v4.p", 
+      "goal_file_path": "./dialogweb/deep_dialog/data_taxi/user_goals_first.v4_1.p", 
       "max_turn": 30, 
       "experience_replay_pool_size": 1000, 
       "write_model_dir": "./dialogweb/deep_dialog/checkpoints/", 
@@ -58,23 +59,23 @@ def init_dialog_manager():
       "run_mode": 0, 
       "trained_model_path": "./dialogweb/deep_dialog/checkpoints/taxi/nl/dqn/agt_13_419_500_0.19000.p", 
       "success_rate_threshold": 0.3, 
-      "nlu_model_path": "./dialogweb/deep_dialog/models/nlu/taxi/lstm_[1532583523.63]_88_99_400_0.998.p", 
+      "nlu_model_path": "./dialogweb/deep_dialog/models/nlu/taxi/lstm_[1532583523.63]_88_99_400_0.998_n.p", 
       "epsilon": 0, 
       "batch_size": 16, 
       "learning_phase": "all", 
-      "nlg_model_path": "./dialogweb/deep_dialog/models/nlg/taxi/lstm_tanh_[1532457558.95]_95_99_194_0.985.p", 
+      "nlg_model_path": "./dialogweb/deep_dialog/models/nlg/taxi/lstm_tanh_[1532457558.95]_95_99_194_0.985_n.p", 
       "act_set": "./dialogweb/deep_dialog/data_taxi/dia_acts.txt", 
       "slot_err_prob": 0.0, 
       "warm_start": 1, 
       "warm_start_epochs": 100, 
-      "dict_path": "./dialogweb/deep_dialog/data_taxi/slot_dict.v1.p", 
+      "dict_path": "./dialogweb/deep_dialog/data_taxi/slot_dict.v1_1.p", 
       "intent_err_prob": 0.0, 
       "split_fold": 5, 
       "slot_set": "./dialogweb/deep_dialog/data_taxi/taxi_slots.txt", 
       "act_level": 0, 
       "dqn_hidden_size": 80, 
       "agt": 11, 
-      "kb_path": "./dialogweb/deep_dialog/data_taxi/taxi.kb.1k.v1.p", 
+      "kb_path": "./dialogweb/deep_dialog/data_taxi/taxi.kb.1k.v1_1.p", 
       "gamma": 0.9
     }
 

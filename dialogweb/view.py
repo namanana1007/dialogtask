@@ -20,6 +20,7 @@ def dia_response(request):
 			"ansstr":ansstr,
 			"episode_over":episode_over
 		}
+	#print(HttpResponse(json.dumps(return_value))
 	return HttpResponse(json.dumps(return_value))
 
 @csrf_exempt
